@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Mooli&display=swap');
+
+:root {
+  --light-theme-bg: #f0e7db;
+  --dark-theme-bg: #202023;
+}
+
+html {
+  background: var(--dark-theme-bg);
+  color: white;
+  font-family: 'Mooli', sans-serif;
+}
+
+.header {
+  box-sizing: border-box;
+  display: flex;
+  height: 70px;
+  padding: 10px;
+  align-items: center;
+}
+
+.header__list {
+  flex-grow: 1;
+  color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.header__list > .header__tab,
+.header__auth > .header__tab {
+  padding: 5px 10px;
+}
+
+.header__tab[class*="header__active"] a {
+  border-bottom: solid 2px #fff;
+  transition: all ease 0.5s;
+}
+
+.header__tab {
+  margin: 0 10px;
+  transition: all ease-out 0.2s;
+}
+
+.header__tab:hover {
+  border-radius: 20px;
+  background-color: #fff;
+  color: black;
+  box-shadow: 2px 2px 5px gray, inset -2px -2px 5px var(--dark-theme-bg);
+}
+
+.header__tab:hover a {
+  border-bottom: none;
+}
+
+.header__auth{
+  display: flex;
+}
+
+.header__button {
+  cursor: pointer;
+}
+
+.header__button img {
+  width: 50px;
+  border-radius: 100%;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+}
+
+main img {
+  border-radius: 20px;
+  max-width: 800px;
+}
+
+.registr-page {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-image: url(../public/img/wrapper_page.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  border-radius: 50px;
+}
+
+.registr-page svg {
+  position: absolute;
+  width: 50px;
+  left: 0;
+}
+
+.registr__form {
+  display: block;
+  background-color: var(--light-theme-bg);
+  border-radius: 20px;
+  position: absolute;
+  width: 350px;
+  height: 400px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.09);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.4px);
+  -webkit-backdrop-filter: blur(4.4px);
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+}
+
+svg[class="google"]{
+  cursor: pointer;
+  bottom: 10px;
+  left: 10px;
+  border-radius: 100%;
+  background-color: #f0e7db;
+}
+
+.registr-page__login,
+.registr-page__email,
+.registr-page__password{
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+  height: 30px;
+  width: 300px;
+}
+
+.registr-page__login > input,
+.registr-page__email > input,
+.registr-page__password > input{
+  width: 200px;
+  height: 30px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.registr__submit{
+  padding: 10px 20px;
+  border-radius: 20px
+}
+
